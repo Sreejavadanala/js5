@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+       text-align: center;
+    }
+   
+    .list-container {
+      text-align: center;
+      display: inline-block;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .logo img {
+      width: 150px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .form-group input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #3897f0;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .form-group input[type="submit"]:hover {
+      background-color: #357ae8;
+    }
+    
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .form-row .checkbox {
+      font-size: 12px;
+    }
+    
+    .form-footer {
+      margin-top: 15px;
+      text-align: center;
+    }
+    
+    .form-footer a {
+      color: #00376b;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<h1 style="text-decoration: underline; color:skyblue;">JAVASCRIPT TASK-3</h1>
+
+  <div class="list-container">
+  <div class="container">
+    <div class="logo">
+      <img src="https://i.imgur.com/zqpwkLQ.png" alt="Instagram Logo">
+    </div>
+  
+    <form onsubmit="login(event)">
+      <div class="form-group">
+        <input type="text" id="username" placeholder="Username" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+      
+      <div class="form-row">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="rememberMe"> Remember me
+          </label>
+        </div>
+        <div class="forgot-password">
+          <a href="file:///C:/Users/sreej/OneDrive/Desktop/tablee.html">Forgot Password?</a>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" value="Login">
+      </div>
+    </form>
+  </div>
+  
+  <div class="form-footer">
+    Don't have an account?<a href="file:///C:/Users/sreej/OneDrive/Desktop/signinsta.html"> Sign up here</a>
+  </div>
+  
+  <script>
+    function login(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var rememberMe = document.getElementById('rememberMe').checked;
+      
+      // Perform login authentication and other logic here
+      // You can customize this function according to your requirements
+      console.log("Username: " + username);
+      console.log("Password: " + password);
+      console.log("Remember Me: " + rememberMe);
+      
+      // Reset form fields
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+      document.getElementById('rememberMe').checked = false;
+    }
+  </script>
+  </div>
+</body>
+</html>
+
